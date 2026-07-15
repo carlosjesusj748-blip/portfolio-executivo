@@ -87,11 +87,11 @@ nav {
 .card-main {
     grid-column: span 12; background: var(--primary); color: var(--bg-base);
     padding: 4rem; border-radius: 40px; position: relative; overflow: hidden;
-    display: flex; flex-direction: row; gap: 3rem; align-items: center; justify-content: space-between;
+    display: flex; flex-direction: row; gap: 3rem; align-items: center; justify-content: space-between; flex-wrap: wrap;
 }
-.card-main-content { flex: 1 1 50%; display: flex; flex-direction: column; gap: 1.5rem; }
-.card-main-image { flex: 1 1 50%; max-width: 500px; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); }
-.project-img { width: 100%; max-width: 100%; height: auto; max-height: 350px; object-fit: cover; display: block; transition: transform 0.5s ease; border-radius: 24px; }
+.card-main-content { flex: 1 1 400px; display: flex; flex-direction: column; gap: 1.5rem; min-width: 0; }
+.card-main-image { flex: 1 1 400px; max-width: 500px; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); min-width: 0; margin: 0 auto; }
+.project-img { width: 100%; height: auto; max-height: 350px; object-fit: cover; display: block; transition: transform 0.5s ease; border-radius: 24px; }
 .project-img:hover { transform: scale(1.05); }
 
 .project-img-small { width: 100%; max-width: 100%; height: auto; max-height: 250px; object-fit: cover; border-radius: 16px; margin-bottom: 1.5rem; border: 1px solid var(--border); box-shadow: var(--shadow); }
