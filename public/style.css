@@ -32,7 +32,8 @@ body {
 
 h1, h2, h3 { font-family: 'Outfit', sans-serif; color: var(--primary); }
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+.container { max-width: 1200px; width: 100%; margin: 0 auto; padding: 0 5%; }
+img { max-width: 100%; height: auto; }
 
 /* Navigation */
 nav {
@@ -80,17 +81,20 @@ nav {
 /* Bento Grid - Focus Sections */
 .bento-grid {
     display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.5rem; margin-top: 2rem;
+    width: 100%;
 }
 
 .card-main {
     grid-column: span 12; background: var(--primary); color: var(--bg-base);
     padding: 4rem; border-radius: 40px; position: relative; overflow: hidden;
-    display: flex; flex-direction: row; gap: 3rem; align-items: center;
+    display: flex; flex-direction: row; gap: 3rem; align-items: center; justify-content: space-between;
 }
-.card-main-content { flex: 1; display: flex; flex-direction: column; gap: 1.5rem; }
-.card-main-image { flex: 1; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); }
-.project-img { width: 100%; height: auto; display: block; transition: transform 0.5s ease; }
+.card-main-content { flex: 1 1 50%; display: flex; flex-direction: column; gap: 1.5rem; }
+.card-main-image { flex: 1 1 50%; max-width: 500px; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); }
+.project-img { width: 100%; max-width: 100%; height: auto; max-height: 350px; object-fit: cover; display: block; transition: transform 0.5s ease; border-radius: 24px; }
 .project-img:hover { transform: scale(1.05); }
+
+.project-img-small { width: 100%; max-width: 100%; height: auto; max-height: 250px; object-fit: cover; border-radius: 16px; margin-bottom: 1.5rem; border: 1px solid var(--border); box-shadow: var(--shadow); }
 
 .card-main h2 { color: var(--accent); font-size: 2.5rem; }
 .card-main p { font-size: 1.1rem; opacity: 0.9; line-height: 1.6; }
@@ -164,7 +168,7 @@ nav {
 .contact { margin: 100px 0; text-align: center; }
 .contact-card {
     background: var(--primary); color: var(--bg-base); padding: 4rem; border-radius: 40px;
-    max-width: 800px; margin: 0 auto; box-shadow: var(--shadow);
+    max-width: 800px; margin: 0 auto; box-shadow: var(--shadow); border: 1px solid var(--border);
 }
 .form-group { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
 .form-row { display: flex; gap: 1rem; width: 100%; }
@@ -197,4 +201,30 @@ input:focus, textarea:focus { border-color: var(--accent); background: rgba(255,
     .hero h1 { font-size: 2.2rem; }
     .form-row { flex-direction: column; }
     .contact-card { padding: 2.5rem; }
+}
+
+/* Print/PDF Export Optimization */
+@media print {
+    body { background: white !important; color: black !important; }
+    .dark-mode { background: white !important; color: black !important; }
+    .chat-widget, .theme-switch, .social-links, .nav-content, nav { display: none !important; }
+    
+    .card-main, .b2r-card, .other-card, .kpi-card, .contact-card {
+        page-break-inside: avoid;
+        background: white !important;
+        border: 2px solid #ddd !important;
+        color: black !important;
+        box-shadow: none !important;
+        margin-bottom: 20px;
+    }
+    
+    .card-main { flex-direction: column !important; padding: 2rem !important; }
+    .card-main h2, .card-main p, .m-val, .m-lab { color: black !important; }
+    .m-item { border-left-color: #333 !important; }
+    
+    .project-img, .project-img-small { max-height: 250px !important; object-fit: contain !important; }
+    
+    .contact-card { padding: 2rem !important; }
+    input, textarea, .btn-submit { border: 1px solid #ccc !important; background: white !important; color: black !important; }
+    .btn-submit { background: #eee !important; color: black !important; }
 }
