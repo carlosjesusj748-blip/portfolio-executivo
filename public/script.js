@@ -48,7 +48,7 @@ function sendMsg() {
         const lowerText = text.toLowerCase();
         let response = '';
 
-        if (lowerText.includes('sad') || lowerText.includes('sabor') || lowerText.includes('tcc')) {
+        if (lowerText.includes('sad') || lowerText.includes('sabor') || lowerText.includes('projeto')) {
             response = '<strong>SAD Sabor de Casa:</strong> Foi meu projeto de destaque! Usei métodos mistos para diagnosticar o gargalo da lanchonete e criei uma aplicação web que simula o ROI. Orquestrei as IAs (Gemini Pro) para desenvolver toda a lógica matemática da plataforma.';
         } else if (lowerText.includes('c2o') || lowerText.includes('analytics')) {
             response = '<strong>C2O Analytics:</strong> Atuei como Arquiteto de Produto. Utilizei o Gemini para criar um dashboard em JS e Firebase. Ele recebe planilhas, higieniza e gera gráficos instantâneos com Chart.js!';
@@ -57,7 +57,7 @@ function sendMsg() {
         } else if (lowerText.includes('contato') || lowerText.includes('email') || lowerText.includes('telefone')) {
             response = 'Preencha o formulário abaixo! A mensagem vai direto para o meu n8n. Meu WhatsApp é (75) 99824-2840.';
         } else if (lowerText.includes('n8n') || lowerText.includes('ia') || lowerText.includes('gemini')) {
-            response = 'Sou especialista em orquestrar agentes (Gemini, DeepSeek, Claude) para resolver problemas corporativos e automatizar fluxos complexos usando ferramentas como n8n.';
+            response = 'Tenho forte foco em orquestrar agentes (Gemini, DeepSeek, Claude) para resolver problemas corporativos e automatizar fluxos complexos usando ferramentas como n8n.';
         } else {
             response = 'Legal! Ainda estou rodando como simulação local. Pergunte-me sobre o <strong>SAD Sabor de Casa</strong>, o <strong>C2O Analytics</strong> ou como entrar em <strong>contato</strong>!';
         }
