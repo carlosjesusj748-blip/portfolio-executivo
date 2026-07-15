@@ -1,309 +1,178 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos de Souza de Jesus | Portfólio Executivo</title>
+    <title>Carlos de Souza de Jesus | Executivo de IA & Processos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-    <header class="topbar">
-        <div class="logo">Carlos<span>.Exec</span></div>
-        <nav>
-            <a href="#kpi">Visão Geral</a>
-            <a href="#cases">Projetos & Impacto</a>
-            <a href="#experience">Experiência & CV</a>
-            <a href="#contact">Contato</a>
-        </nav>
-    </header>
 
-    <main class="dashboard-container">
-        <!-- Hero / KPI Dashboard Section -->
-        <section id="kpi" class="hero-dashboard fade-in">
-            <div class="hero-profile">
-                <div class="profile-img-container">
-                    <img src="profile.png.png" alt="Carlos de Souza de Jesus" class="profile-img" onerror="this.src='https://ui-avatars.com/api/?name=Carlos+Jesus&size=180&background=0F172A&color=fff'">
-                </div>
-                <div class="hero-text">
-                    <h1>Carlos de Souza de Jesus</h1>
-                    <p class="role"><i class="fa-solid fa-chart-line"></i> Administração | Análise de Dados | Gestão de Projetos</p>
-                    <p class="summary-text">Estudante do último ano de Administração pela UFBA, com sólida vivência em rotinas administrativas, gestão de documentos, suporte financeiro e elaboração de projetos. Meu foco é ampliar minha capacidade analítica para embasar tomadas de decisão com dados e impulsionar a melhoria contínua dos resultados da organização.</p>
-                    
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/carlos-de-souza-de-jesus-644405201/" target="_blank" class="social-btn">
-                            <i class="fa-brands fa-linkedin"></i> LinkedIn
-                        </a>
-                        <a href="https://github.com/carlosjesusj748-blip" target="_blank" class="social-btn">
-                            <i class="fa-brands fa-github"></i> GitHub
-                        </a>
-                    </div>
-                </div>
+    <nav>
+        <div class="container nav-content">
+            <a href="#" class="logo">CARLOS<span>.IA</span></a>
+            <div class="theme-switch" onclick="toggleTheme()">
+                <i class="fa-solid fa-moon" id="themeIcon"></i>
             </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        <section class="hero">
+            <span class="sad-badge">Administração | Análise de Dados | Gestão de Projetos</span>
+            <h1>Orquestrando a Eficiência de Dados com <span style="color:var(--accent)">IA Aplicada</span>.</h1>
+            <p>Estudante do último ano de Administração pela UFBA, especialista em transformar processos administrativos complexos em workflows automatizados. Do suporte à decisão gastronômica à liderança operacional corporativa.</p>
             
-            <div class="kpi-grid">
-                <div class="kpi-card">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/carlos-de-souza-de-jesus-644405201/" target="_blank" class="social-btn">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/carlosjesusj748-blip" target="_blank" class="social-btn">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+            </div>
+
+            <div class="kpi-row">
+                <div class="kpi-card reveal">
                     <span class="kpi-label">Destaque 2026</span>
-                    <span class="kpi-value">Aprovado</span>
-                    <span class="kpi-trend"><i class="fa-solid fa-trophy" style="color:var(--accent-color);"></i> Concurso CPNU 2 (Lista de Espera Analista)</span>
+                    <span class="kpi-val" style="font-size: 1.5rem; margin-bottom: 5px;">Aprovado</span>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fa-solid fa-trophy" style="color:var(--accent);"></i> CPNU 2 (Lista de Espera)</span>
                 </div>
-                <div class="kpi-card">
+                <div class="kpi-card reveal">
                     <span class="kpi-label">Certificações</span>
-                    <span class="kpi-value">Google & HB</span>
-                    <span class="kpi-trend"><i class="fa-solid fa-certificate" style="color:var(--accent-color);"></i> Análise de Dados / Gestão Pública</span>
+                    <span class="kpi-val" style="font-size: 1.5rem; margin-bottom: 5px;">Google & HB</span>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fa-solid fa-certificate" style="color:var(--accent);"></i> Análise de Dados</span>
                 </div>
-                <div class="kpi-card">
+                <div class="kpi-card reveal">
                     <span class="kpi-label">Foco de Atuação</span>
-                    <span class="kpi-value">Data-Driven</span>
-                    <span class="kpi-trend"><i class="fa-solid fa-bullseye" style="color:var(--accent-color);"></i> SAD, Otimização & IA</span>
+                    <span class="kpi-val" style="font-size: 1.5rem; margin-bottom: 5px;">SAD & IA</span>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fa-solid fa-bullseye" style="color:var(--accent);"></i> Tomada de Decisão</span>
                 </div>
             </div>
         </section>
 
-        <!-- Cases de Estudo Section -->
-        <section id="cases" class="cases-section fade-in">
-            <div class="section-header">
-                <h2>Projetos Práticos & Cases de Estudo</h2>
-                <p>Resultados auditáveis guiados por análise de dados e visão de negócios.</p>
-            </div>
-
-            <!-- Case 1 (Destaque Principal) -->
-            <div class="case-study-card featured-case">
-                <span class="featured-badge"><i class="fa-solid fa-star"></i> Projeto Destaque</span>
-                <div class="case-content">
-                    <h3>SAD Sabor de Casa - Sistema de Apoio à Decisão</h3>
-                    <p class="case-subtitle">Dashboard interativo para auxiliar microempreendimento familiar a tomar decisões baseadas em dados.</p>
-                    
-                    <div class="case-block">
-                        <h4><i class="fa-solid fa-magnifying-glass-chart"></i> O Cenário Atual (O Problema)</h4>
-                        <p>Através de pesquisa aprofundada de métodos mistos (quali-quanti - 165 páginas de TCC), diagnostiquei que a lanchonete sofria com uma estagnação comercial profunda após o fechamento do final de linha de ônibus local em 2019. Gargalos identificados: Dissonância perceptiva (cliente via falta de inovação x gestão culpava fatores externos), Inércia Digital (dependência de vitrine física) e Gargalos Operacionais (Teoria das Restrições - TOC).</p>
-                    </div>
-                    
-                    <div class="case-block">
-                        <h4><i class="fa-solid fa-lightbulb"></i> A Ação Administrativa (A Solução)</h4>
-                        <p>Desenvolvi uma aplicação web que simula o impacto financeiro e operacional de decisões. O sistema possui Simulador de Cenários, Otimização Matemática (Mix ideal de produtos via Programação Linear), Dashboard Visual e Módulo TOC (Teoria das Restrições) para gestão de gargalos.</p>
-                    </div>
-                    
-                    <div class="case-block">
-                        <h4><i class="fa-solid fa-chart-pie"></i> Desenvolvimento e Tecnologias (Orquestração por IA)</h4>
-                        <p>Toda a lógica computacional, a arquitetura e a codificação deste sistema foram integralmente desenvolvidas sob a minha coordenação, utilizando o <strong>Agente Autônomo Gemini Pro (Antigravity)</strong> como meu "braço de engenharia". Atuei como Product Manager e Arquiteto de Soluções, orquestrando as IAs para traduzir o conhecimento empírico do TCC em código funcional, garantindo que o cálculo matemático de ROI e a otimização de combos seguissem a lógica executiva.</p>
-                    </div>
-                    
-                    <div class="links-box">
-                        <a href="https://sad-sabor-de-casa.onrender.com/" target="_blank" class="btn-outline">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver Aplicação em Produção (Render)
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Case 2 -->
-            <div class="case-study-card">
-                <div class="case-content">
-                    <h3>C2O Analytics: Do Papel à Nuvem com Inteligência Artificial</h3>
-                    <p class="case-subtitle">Painel de Business Intelligence para negócios locais gerado via arquitetura guiada por IA.</p>
-                    
-                    <div class="case-block">
-                        <h4><i class="fa-solid fa-magnifying-glass-chart"></i> O Cenário Atual (O Desafio)</h4>
-                        <p>Ferramentas como Power BI e Tableau são incríveis, mas muito complexas para negócios locais que apenas querem "jogar" uma planilha no sistema e ver gráficos instantâneos, sem complicação.</p>
-                    </div>
-                    
-                    <div class="case-block">
-                        <h4><i class="fa-solid fa-lightbulb"></i> A Ação Administrativa (A Solução)</h4>
-                        <p>Assumi o papel de Arquiteto e Idealizador de Produto, utilizando o <strong>Agente Gemini Pro</strong> como meu "braço de engenharia" primário, com auxílio do <strong>Google AI Studio, DeepSeek, ChatGPT e Claude</strong> na elaboração da lógica computacional. O C2O permite que qualquer pessoa suba uma planilha .xlsx ou .csv e analise vendas instantaneamente, com inteligência de importação, interface premium corporativa (Glassmorphism) e autenticação segura em nuvem (Firebase).</p>
-                    </div>
-                    
-                    <div class="case-block">
-                        <h4><i class="fa-solid fa-rocket"></i> O Impacto</h4>
-                        <p>A aplicação prova que a "Lógica Importa Mais que a Sintaxe". Gerenciei a complexidade de integração entre UI, Banco de Dados (Firebase) e Lógica de Leitura, mantendo o foco absoluto na experiência do usuário final e na resolução de um problema de negócios real.</p>
-                    </div>
-
-                    <div class="links-box">
-                        <a href="https://c2o-dashboard.web.app/" target="_blank" class="btn-outline">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver Dashboard C2O
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Resumo Profissional (CV) e Extracurriculares -->
-        <section id="experience" class="cases-section fade-in">
-            <div class="section-header">
-                <h2>Experiência, Formação & Cursos</h2>
-                <p>Trajetória profissional, acadêmica e qualificações técnicas.</p>
-            </div>
+        <!-- BENTO GRID -->
+        <div class="bento-grid">
             
-            <div class="cv-card">
-                <!-- Experiência Profissional -->
-                <div class="cv-item">
-                    <h4><i class="fa-solid fa-briefcase"></i> B2R Serviços Administrativos LTDA</h4>
-                    <span class="period">Estagiário Administrativo (Finalizado | Jun/2025 - Mai/2026)</span>
-                    <ul>
-                        <li>Apoio direto na elaboração, formatação e submissão de projetos incentivados para editais.</li>
-                        <li>Gestão e organização de documentação institucional, certidões, planos de trabalho e orçamentos.</li>
-                        <li>Acompanhamento da execução de projetos, atualizando cronogramas, planilhas de controle e indicadores de desempenho.</li>
-                        <li>Auxílio nos processos de prestação de contas, organizando notas fiscais, extratos e relatórios.</li>
-                    </ul>
-                </div>
-
-                <!-- Experiência Voluntária (Re-adicionada conforme pedido) -->
-                <div class="cv-item">
-                    <h4><i class="fa-solid fa-hand-holding-heart"></i> Associação Remanescente Quilombola Bete II</h4>
-                    <span class="period">Assistente Administrativo Voluntário (Jan/2018 - Dez/2024)</span>
-                    <ul>
-                        <li>Criação e gestão do banco de dados de moradores, garantindo atualização e acessibilidade.</li>
-                        <li>Estruturação de controle financeiro da associação e elaboração de fichas de pagamento.</li>
-                        <li>Suporte técnico em processos de licitação e análise documental.</li>
-                        <li>Atendimento direto à comunidade para emissão de documentos e encaminhamento de demandas.</li>
-                    </ul>
-                </div>
-
-                <!-- Formação e Skills -->
-                <div class="cv-item formacao">
-                    <h4><i class="fa-solid fa-graduation-cap"></i> Formação Acadêmica & Skills</h4>
-                    <p><strong>Bacharelado:</strong> Administração (UFBA - Previsão Dez/2026)</p>
-                    <p><strong>Soft Skills:</strong> Liderança Guiada por IA, Organização, Comunicação Assertiva, Resolução de Problemas, Foco em Resultados.</p>
-                    <p><strong>Hard Skills:</strong> Orquestração de Agentes IA, Análise de Dados, Gestão de Projetos, Elaboração de Relatórios, Prestação de Contas, Rotinas Administrativas.</p>
-                    <div class="skills-tags">
-                        <span class="skill-tag">Excel</span>
-                        <span class="skill-tag">Power BI</span>
-                        <span class="skill-tag">Pacote Office</span>
-                        <span class="skill-tag"><i class="fa-solid fa-robot"></i> Google AI Studio</span>
-                        <span class="skill-tag"><i class="fa-solid fa-robot"></i> Gemini Pro (Agente)</span>
-                        <span class="skill-tag"><i class="fa-solid fa-robot"></i> DeepSeek</span>
-                        <span class="skill-tag"><i class="fa-solid fa-robot"></i> ChatGPT</span>
-                        <span class="skill-tag"><i class="fa-solid fa-robot"></i> Claude</span>
-                        <span class="skill-tag"><i class="fa-solid fa-gears"></i> Iniciante no n8n</span>
+            <!-- DESTAQUE 1: SAD SABOR DE CASA -->
+            <div class="card-main reveal">
+                <div class="card-main-content">
+                    <div>
+                        <span class="sad-badge">PROJETO DESTAQUE</span>
+                        <h2>SAD Sabor de Casa</h2>
+                        <p>Sistema de Apoio à Decisão (DSS) interativo para auxiliar microempreendimento familiar. Diagnóstico via pesquisa de métodos mistos (TCC) e aplicação web com Simulador de Cenários, Otimização Matemática e Módulo TOC, totalmente orquestrada com Gemini Pro.</p>
                     </div>
+                    <div class="sad-metrics">
+                        <div class="m-item">
+                            <span class="m-val">+22%</span>
+                            <span class="m-lab">Otimização de Margem</span>
+                        </div>
+                        <div class="m-item">
+                            <span class="m-val">Real-Time</span>
+                            <span class="m-lab">Cálculo de CMV</span>
+                        </div>
+                        <div class="m-item">
+                            <span class="m-val">Gemini Pro</span>
+                            <span class="m-lab">Arquitetura Guiada por IA</span>
+                        </div>
+                    </div>
+                    <a href="https://sad-sabor-de-casa.onrender.com/" target="_blank" class="btn-outline" style="margin-top: 1.5rem; display: inline-block;">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver Aplicação
+                    </a>
                 </div>
-
-                <!-- Cursos e Certificações -->
-                <div class="cv-item">
-                    <h4><i class="fa-solid fa-award"></i> Cursos e Certificações</h4>
-                    <ul>
-                        <li><strong>Analista e Parecerista de Projetos Culturais</strong> (IFG) - 160h (2025)</li>
-                        <li><strong>Gestão Pública, Empreendedorismo e Elaboração de Projetos</strong> (HumanaBrasil) - 120h (2021)</li>
-                        <li><strong>Educação Financeira para MEIs</strong> (UFBA) - 40h (2024/2025)</li>
-                        <li><strong>Análise de Dados: Fundamentos e Tomadas de Decisão</strong> (Google / Coursera) - 37h (2023)</li>
-                        <li><strong>I Workshop de Extensão em Administração</strong> (UFBA) - 16h (2023)</li>
-                        <li><strong>Seminários de Tecnologias de Gestão: Blockchain</strong> (UFBA) - 15h (2024)</li>
-                    </ul>
-                </div>
-                
-                <!-- Eventos -->
-                <div class="cv-item">
-                    <h4><i class="fa-solid fa-microphone"></i> Eventos e Congressos</h4>
-                    <ul>
-                        <li>Apresentação de Vídeo-Pôster "Artefato Tecnológico" no Congresso UFBA 2023.</li>
-                        <li>Seminário de Lançamento da BibliON - Biblioteca Viva (2022).</li>
-                        <li>MKTLAB EAUFBA: E-commerce para Pequenas e Médias Empresas (2020 e 2021).</li>
-                        <li>II Congresso Virtual UFBA 2021.</li>
-                        <li>NASA International Space Apps Challenge (2020).</li>
-                        <li>I Workshop de Estatística e Ciência de Dados Aplicadas à Indústria (I WECDAI).</li>
-                    </ul>
+                <div class="card-main-image">
+                    <img src="SAD SABOR DE CASA.png" alt="Dashboard SAD Sabor de Casa" class="project-img">
                 </div>
             </div>
-        </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section fade-in">
-            <div class="contact-card">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fa-solid fa-envelope"></i> carlosjesusj748@gmail.com
+            <!-- DESTAQUE 2: B2R ESTÁGIO & QUILOMBO -->
+            <div class="b2r-card reveal">
+                <span class="b2r-tag">Trajetória Corporativa</span>
+                <h3 style="font-size: 1.8rem; margin: 1rem 0;">Experiência Administrativa</h3>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Atuação estratégica no coração dos processos administrativos, tanto no setor privado quanto no 3º setor.</p>
+                <ul class="experience-list">
+                    <li>
+                        <strong>B2R Serviços Administrativos (2025-2026)</strong>
+                        <p>Apoio direto na elaboração de projetos incentivados para editais, prestação de contas, organização de documentos e acompanhamento de cronogramas.</p>
+                    </li>
+                    <li>
+                        <strong>Assoc. Quilombola Bete II (2018-2024)</strong>
+                        <p>Criação do banco de dados de moradores, estruturação do controle financeiro, suporte técnico em licitações e atendimento à comunidade.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- OUTROS: C2O ANALYTICS -->
+            <div class="other-card reveal">
+                <span class="b2r-tag">Data Engine</span>
+                <h3 style="margin: 1rem 0;">C2O Analytics</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Painel de BI para negócios locais gerado via arquitetura guiada por IA. Upload universal de planilhas com renderização instantânea, interface Glassmorphism e login via Firebase.</p>
+                <img src="c2o.png" alt="C2O Analytics" class="project-img-small" style="border-radius: 12px; margin-bottom: 1rem; width: 100%; object-fit: cover;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="display: flex; gap: 10px;">
+                        <i class="fa-solid fa-cloud" title="Firebase"></i>
+                        <i class="fa-solid fa-code" title="JS"></i>
+                        <i class="fa-solid fa-chart-pie" title="Chart.js"></i>
                     </div>
-                    <div class="contact-item">
-                        <i class="fa-brands fa-whatsapp"></i> (75) 99824-2840
-                    </div>
+                    <a href="https://c2o-dashboard.web.app/" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: bold; font-size: 0.9rem;">
+                        Acessar <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
-                <form id="portfolioForm">
-                    <div class="form-row">
-                        <div class="input-group">
-                            <label for="nome">Seu Nome / Recrutador</label>
-                            <input type="text" id="nome" name="nome" placeholder="Como devo lhe chamar?" required>
-                        </div>
-                        <div class="input-group">
-                            <label for="email">E-mail Corporativo</label>
-                            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="input-group">
-                            <label for="empresa">Empresa</label>
-                            <input type="text" id="empresa" name="empresa" placeholder="Sua empresa" required>
-                        </div>
-                        <div class="input-group">
-                            <label for="telefone">Telefone / WhatsApp</label>
-                            <input type="tel" id="telefone" name="telefone" placeholder="(DD) 90000-0000" required>
-                        </div>
-                    </div>
-                    <div class="input-group">
-                        <label for="mensagem">Detalhes da Oportunidade / Mensagem</label>
-                        <textarea id="mensagem" name="mensagem" required rows="4" placeholder="Deixe sua mensagem aqui..."></textarea>
-                    </div>
-                    
-                    <input type="text" name="_honey" id="honeypot" style="display:none" tabindex="-1" autocomplete="off">
+            </div>
 
-                    <button type="submit" id="submitBtn" class="btn-primary">
-                        <span class="btn-text"><i class="fa-regular fa-paper-plane"></i> Enviar Contato</span>
-                        <div class="loader" style="display: none;"></div>
+        </div>
+
+        <section class="contact reveal">
+            <div class="contact-card">
+                <h2>Vamos Otimizar sua Operação?</h2>
+                <p>Mande uma mensagem. Os dados cairão diretamente no meu fluxo do n8n.</p>
+                <form class="form-group" id="leadForm">
+                    <div class="form-row">
+                        <input type="text" id="nome" placeholder="Seu Nome / Recrutador" required>
+                        <input type="email" id="email" placeholder="E-mail Corporativo" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" id="empresa" placeholder="Empresa" required>
+                        <input type="tel" id="telefone" placeholder="Telefone / WhatsApp" required>
+                    </div>
+                    <textarea id="mensagem" placeholder="Detalhes da Oportunidade / Mensagem" required rows="4" style="width: 100%; padding: 1.2rem; border-radius: 12px; border: none; background: rgba(255,255,255,0.1); color: white; outline: none; margin-top: 1rem; font-family: inherit; resize: vertical;"></textarea>
+                    
+                    <input type="text" id="honeypot" style="display:none" tabindex="-1" autocomplete="off">
+                    
+                    <button type="submit" id="submitBtn" class="btn-submit">
+                        <span class="btn-text">Enviar Contato</span>
+                        <div class="loader" style="display: none; border: 3px solid rgba(255,255,255,0.3); border-radius: 50%; border-top: 3px solid white; width: 20px; height: 20px; animation: spin 1s linear infinite; margin: 0 auto;"></div>
                     </button>
-                    <div id="formFeedback" class="feedback-msg"></div>
+                    <div id="formFeedback" style="margin-top: 1rem; font-weight: bold; font-size: 0.9rem;"></div>
                 </form>
             </div>
         </section>
+
     </main>
 
-    <!-- Chatbot Widget -->
-    <div id="chatbot-widget" class="chatbot-widget">
-        <div class="chat-header" id="chat-toggle">
-            <span><i class="fa-solid fa-robot"></i> Assistente IA do Carlos</span>
-            <span class="toggle-icon"><i class="fa-solid fa-chevron-up"></i></span>
+    <div class="chat-widget">
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">Assistente IA do Carlos</div>
+            <div class="chat-body" id="chatBody">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="msg bot">Olá! Fui treinado com o currículo do Carlos. Posso te falar sobre o SAD Sabor de Casa, sobre o C2O Analytics ou sobre sua experiência na B2R. O que deseja explorar?</div>
+                </div>
+            </div>
+            <div class="chat-input-area" style="display: flex; padding: 10px; background: var(--glass); border-top: 1px solid var(--border);">
+                <input type="text" id="chatInput" placeholder="Pergunte algo..." style="background: var(--bg-base); color: var(--text-main); flex: 1; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--border);">
+                <button id="sendChatBtn" style="background: var(--accent); color: white; border: none; border-radius: 8px; padding: 8px 15px; margin-left: 8px; cursor: pointer;"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
         </div>
-        <div class="chat-body" id="chat-body">
-            <div class="chat-messages" id="chat-messages">
-                <div class="msg ai">Olá! Sou a IA treinada com o currículo do Carlos. Quer saber sobre o projeto SAD Sabor de Casa, sobre o C2O Analytics ou sobre sua experiência na B2R e Associação Quilombola?</div>
-            </div>
-            <div class="chat-input-area">
-                <input type="text" id="chat-input" placeholder="Pergunte algo...">
-                <button id="send-chat" class="btn-primary small"><i class="fa-solid fa-paper-plane"></i></button>
-            </div>
+        <div class="chat-btn" onclick="toggleChat()">
+            <i class="fa-solid fa-robot"></i>
         </div>
     </div>
 
-    <!-- Script de interatividade visual -->
-    <script>
-        // Animação de fade-in no scroll
-        const fadeElements = document.querySelectorAll('.fade-in');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        fadeElements.forEach(el => observer.observe(el));
-        
-        // Chatbot Toggle (apenas visual, lógica de envio em script.js)
-        const chatToggle = document.getElementById('chat-toggle');
-        const chatbotWidget = document.getElementById('chatbot-widget');
-        const toggleIcon = document.querySelector('.toggle-icon i');
-
-        chatToggle.addEventListener('click', () => {
-            chatbotWidget.classList.toggle('open');
-            if (chatbotWidget.classList.contains('open')) {
-                toggleIcon.classList.remove('fa-chevron-up');
-                toggleIcon.classList.add('fa-chevron-down');
-            } else {
-                toggleIcon.classList.remove('fa-chevron-down');
-                toggleIcon.classList.add('fa-chevron-up');
-            }
-        });
-    </script>
-    <script src="script.js?v=2.0"></script>
+    <script src="script.js"></script>
 </body>
 </html>
