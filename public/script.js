@@ -106,7 +106,8 @@ if(form) {
             empresa: document.getElementById('empresa').value,
             telefone: document.getElementById('telefone').value,
             mensagem: document.getElementById('mensagem').value,
-            origem: 'Portfólio Executivo (Novo Template)'
+            origem: 'Portfólio Executivo (Novo Template)',
+            tipo: 'Contato Comercial'
         };
 
         btnText.style.display = 'none';
@@ -169,7 +170,7 @@ if(suggestionForm) {
             });
 
             if(response.ok) {
-                suggestionFeedbackMsg.textContent = 'Sugestão enviada com sucesso! Muito obrigado pelo feedback.';
+                suggestionFeedbackMsg.textContent = 'Sua mensagem foi enviada de forma anônima com sucesso! Muito obrigado.';
                 suggestionFeedbackMsg.style.color = 'var(--accent)';
                 suggestionForm.reset();
             } else { throw new Error('Falha no envio'); }
