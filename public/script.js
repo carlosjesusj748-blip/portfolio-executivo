@@ -139,6 +139,53 @@ if(form) {
     });
 }
 
+// Lógica de Envio de Sugestão Anônima
+const suggestionForm = document.getElementById('suggestionForm');
+const submitSuggestionBtn = document.getElementById('submitSuggestionBtn');
+const suggestionBtnText = submitSuggestionBtn ? submitSuggestionBtn.querySelector('.btn-text') : null;
+const suggestionLoader = submitSuggestionBtn ? submitSuggestionBtn.querySelector('.loader') : null;
+const suggestionFeedbackMsg = document.getElementById('suggestionFeedback');
+
+if(suggestionForm) {
+    suggestionForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const formData = {
+            tipo: 'Sugestão Anônima',
+            mensagem: document.getElementById('sugestaoMsg').value,
+            origem: 'Portfólio Executivo (Novo Template)'
+        };
+
+        suggestionBtnText.style.display = 'none';
+        suggestionLoader.style.display = 'block';
+        submitSuggestionBtn.disabled = true;
+        suggestionFeedbackMsg.textContent = '';
+
+        try {
+            const response = await fetch(MAKE_WEBHOOK_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
+
+            if(response.ok) {
+                suggestionFeedbackMsg.textContent = 'Sugestão enviada com sucesso! Muito obrigado pelo feedback.';
+                suggestionFeedbackMsg.style.color = 'var(--accent)';
+                suggestionForm.reset();
+            } else { throw new Error('Falha no envio'); }
+        } catch (error) {
+            suggestionFeedbackMsg.textContent = 'Erro ao enviar sugestão. Tente novamente mais tarde.';
+            suggestionFeedbackMsg.style.color = '#ef4444';
+        } finally {
+            suggestionBtnText.style.display = 'block';
+            suggestionLoader.style.display = 'none';
+            submitSuggestionBtn.disabled = false;
+            
+            setTimeout(() => { suggestionFeedbackMsg.textContent = ''; }, 5000);
+        }
+    });
+}
+
 // Modal for Certificates
 function openModal(imageSrc) {
     const modal = document.getElementById('certModal');

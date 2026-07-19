@@ -252,6 +252,22 @@
             </div>
         </section>
 
+        <!-- Caixa de Sugestões Anônima -->
+        <section class="contact reveal" style="margin-top: 2rem;">
+            <div class="contact-card" style="background: var(--glass); border: 1px dashed var(--accent);">
+                <h2><i class="fa-solid fa-comment-dots"></i> Caixa de Sugestões Anônima</h2>
+                <p>Tem alguma dica de melhoria ou feedback sobre o portfólio? Deixe aqui sem precisar se identificar. Somente eu terei acesso a essa mensagem.</p>
+                <form class="form-group" id="suggestionForm" style="margin-top: 1.5rem;">
+                    <textarea id="sugestaoMsg" placeholder="Sua sugestão ou feedback..." required rows="3" style="width: 100%; border-radius: 8px; padding: 12px; background: var(--bg-base); color: var(--text-main); border: 1px solid var(--border); font-family: inherit; font-size: 1rem;"></textarea>
+                    <button type="submit" id="submitSuggestionBtn" class="btn-submit" style="background: transparent; border: 2px solid var(--accent); color: var(--accent); margin-top: 1rem;">
+                        <span class="btn-text">Enviar Sugestão</span>
+                        <div class="loader" style="display: none; border: 3px solid rgba(255,255,255,0.3); border-radius: 50%; border-top: 3px solid var(--accent); width: 20px; height: 20px; animation: spin 1s linear infinite; margin: 0 auto;"></div>
+                    </button>
+                    <div id="suggestionFeedback" style="margin-top: 1rem; font-weight: bold; font-size: 0.9rem;"></div>
+                </form>
+            </div>
+        </section>
+
         <footer style="text-align: center; padding: 2rem 0; margin-top: 2rem; border-top: 1px solid var(--border);">
             <div style="margin-bottom: 1rem; display: flex; flex-direction: column; align-items: center; gap: 8px;">
                 <span style="font-weight: 600; font-size: 0.9rem; color: var(--text-muted);"><i class="fa-solid fa-eye"></i> Visitas ao Portfólio</span>
