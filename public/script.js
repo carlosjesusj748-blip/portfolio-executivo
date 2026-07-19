@@ -1,5 +1,5 @@
-// Webhook do n8n para formulário
-const N8N_WEBHOOK_URL = 'https://carlosn8n1.app.n8n.cloud/webhook/portfolio-lead';
+// Webhook do Make para formulário
+const MAKE_WEBHOOK_URL = 'https://hook.us2.make.com/b5ck9i6tyhotxj05758lwbmkrr82op87';
 
 // Tema Escuro / Claro
 function toggleTheme() {
@@ -55,9 +55,9 @@ function sendMsg() {
         } else if (lowerText.includes('b2r') || lowerText.includes('estágio') || lowerText.includes('experiência')) {
             response = '<strong>Experiência:</strong> Estagiei na B2R Serviços Administrativos (atuando na elaboração de projetos e prestação de contas) e atuei como Assistente Voluntário na Assoc. Quilombola Bete II por mais de 6 anos.';
         } else if (lowerText.includes('contato') || lowerText.includes('email') || lowerText.includes('telefone')) {
-            response = 'Preencha o formulário abaixo! A mensagem vai direto para o meu n8n. Meu WhatsApp é (75) 99824-2840.';
-        } else if (lowerText.includes('n8n') || lowerText.includes('ia') || lowerText.includes('gemini')) {
-            response = 'Tenho forte foco em orquestrar agentes (Gemini, DeepSeek, Claude) para resolver problemas corporativos e automatizar fluxos complexos usando ferramentas como n8n.';
+            response = 'Preencha o formulário abaixo! A mensagem vai direto para a minha automação. Meu WhatsApp é (75) 99824-2840.';
+        } else if (lowerText.includes('n8n') || lowerText.includes('ia') || lowerText.includes('gemini') || lowerText.includes('make')) {
+            response = 'Tenho forte foco em orquestrar agentes (Gemini, DeepSeek, Claude) para resolver problemas corporativos e automatizar fluxos complexos usando ferramentas como n8n e Make.';
         } else {
             response = 'Legal! Ainda estou rodando como simulação local. Pergunte-me sobre o <strong>SAD Sabor de Casa</strong>, o <strong>C2O Analytics</strong> ou como entrar em <strong>contato</strong>!';
         }
@@ -115,14 +115,14 @@ if(form) {
         feedbackMsg.textContent = '';
 
         try {
-            const response = await fetch(N8N_WEBHOOK_URL, {
+            const response = await fetch(MAKE_WEBHOOK_URL, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)
             });
 
             if(response.ok) {
-                feedbackMsg.textContent = 'Mensagem enviada com sucesso! A minha IA do n8n já está processando seu contato.';
+                feedbackMsg.textContent = 'Mensagem enviada com sucesso! Minha IA já está processando seu contato.';
                 feedbackMsg.style.color = 'var(--accent)';
                 form.reset();
             } else { throw new Error('Falha no envio'); }
@@ -137,4 +137,16 @@ if(form) {
             setTimeout(() => { feedbackMsg.textContent = ''; }, 5000);
         }
     });
+}
+
+// Modal for Certificates
+function openModal(imageSrc) {
+    const modal = document.getElementById('certModal');
+    const modalImg = document.getElementById('modalImg');
+    modalImg.src = imageSrc;
+    modal.style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById('certModal').style.display = "none";
 }
