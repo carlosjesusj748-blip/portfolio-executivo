@@ -32,19 +32,19 @@
             <p>Estudante do último ano de Administração pela UFBA, apaixonado por tecnologia e gestão. Buscando aplicar soluções de dados e ferramentas de IA para apoiar a tomada de decisão e facilitar o dia a dia administrativo das empresas.</p>
             
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/carlos-de-souza-de-jesus-644405201/" target="_blank" class="social-btn">
+                <a href="https://www.linkedin.com/in/carlos-de-souza-de-jesus-644405201/" target="_blank" rel="noopener noreferrer" class="social-btn">
                     <i class="fa-brands fa-linkedin"></i> LinkedIn
                 </a>
-                <a href="https://github.com/carlosjesusj748-blip" target="_blank" class="social-btn">
+                <a href="https://github.com/carlosjesusj748-blip" target="_blank" rel="noopener noreferrer" class="social-btn">
                     <i class="fa-brands fa-github"></i> GitHub
                 </a>
             </div>
 
             <div class="kpi-row">
-                <div class="kpi-card reveal">
+                <div class="kpi-card reveal" style="cursor: pointer;" onclick="openModal('RESULTADO DEFINITIVO DA CLASSIFICAÇÃO FINAL - CONCURSO PÚBLICO NACIONAL UNIFICADO - CPNU 2.png')" title="Ver Resultado">
                     <span class="kpi-label">Destaque 2026</span>
                     <span class="kpi-val" style="font-size: 1.5rem; margin-bottom: 5px;">Aprovado</span>
-                    <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fa-solid fa-trophy" style="color:var(--accent);"></i> CPNU 2 (Lista de Espera)</span>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);"><i class="fa-solid fa-trophy" style="color:var(--accent);"></i> CPNU 2 (Lista de Espera) <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem; margin-left:4px;"></i></span>
                 </div>
                 <div class="kpi-card reveal">
                     <span class="kpi-label">Certificações</span>
@@ -68,7 +68,7 @@
                     <div>
                         <span class="sad-badge">PROJETO DESTAQUE</span>
                         <h2 style="color: #FFD700 !important; font-size: 2.5rem; margin-bottom: 0.5rem;">SAD Sabor de Casa</h2>
-                        <p style="color: #FFFFFF !important; font-size: 1.1rem; opacity: 0.95;">Plataforma analítica interativa para auxiliar a gestão de um microempreendimento familiar. Diagnóstico via pesquisa de métodos mistos e aplicação web com Simulador de Cenários, Otimização Matemática e Módulo TOC, totalmente orquestrada com Gemini Pro.</p>
+                        <p style="color: #FFFFFF !important; font-size: 1.1rem; opacity: 0.95;">Plataforma analítica interativa para auxiliar a gestão de um microempreendimento familiar. Diagnóstico via pesquisa de métodos mistos e aplicação web com Simulador de Cenários, Otimização Matemática e Módulo TOC, cruzando algoritmos de Machine Learning (Fuzzy, Random Forest, DBSCAN), totalmente orquestrada com Gemini Pro.</p>
                     </div>
                     <div class="sad-metrics">
                         <div class="m-item">
@@ -84,12 +84,12 @@
                             <span class="m-lab">Arquitetura Guiada por IA</span>
                         </div>
                     </div>
-                    <a href="https://sad-sabor-de-casa.onrender.com/" target="_blank" class="btn-outline" style="margin-top: 1.5rem; display: inline-block;">
+                    <a href="https://sad-sabor-de-casa.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn-outline" style="margin-top: 1.5rem; display: inline-block;">
                         <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver Aplicação
                     </a>
                 </div>
                 <div class="card-main-image">
-                    <img src="SAD SABOR DE CASA.png" alt="Dashboard SAD Sabor de Casa" class="project-img">
+                    <img src="SAD SABOR DE CASA.png" alt="Dashboard SAD Sabor de Casa" class="project-img" style="cursor: pointer;" onclick="openModal(this.src)">
                 </div>
             </div>
 
@@ -115,21 +115,83 @@
                             <span class="m-lab">Diagnósticos</span>
                         </div>
                     </div>
-                    <a href="https://auditmark1.lovable.app/" target="_blank" class="btn-outline" style="margin-top: 1.5rem; display: inline-block;">
+                    <a href="https://auditmark1.lovable.app/" target="_blank" rel="noopener noreferrer" class="btn-outline" style="margin-top: 1.5rem; display: inline-block;">
                         <i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar AuditMark
                     </a>
                 </div>
                 <div class="card-main-image">
-                    <img src="AuditMark — Inteligência Competitiva.png" alt="AuditMark" class="project-img">
+                    <img src="AuditMark — Inteligência Competitiva.png" alt="AuditMark" class="project-img" style="cursor: pointer;" onclick="openModal(this.src)">
+                </div>
+            </div>
+
+            <!-- C2O ANALYTICS COMO PROJETO PRINCIPAL -->
+            <div class="card-main reveal" style="flex-direction: row-reverse;">
+                <div class="card-main-content">
+                    <div>
+                        <span class="sad-badge">DATA ENGINE</span>
+                        <h2 style="color: #FFD700 !important; font-size: 2.5rem; margin-bottom: 0.5rem;">C2O Analytics</h2>
+                        <p style="color: #FFFFFF !important; font-size: 1.1rem; opacity: 0.95;">Painel de BI para negócios locais gerado via arquitetura guiada por IA. Upload universal de planilhas com renderização instantânea, interface Glassmorphism e login seguro na nuvem.</p>
+                    </div>
+                    <div class="sad-metrics">
+                        <div class="m-item">
+                            <span class="m-val">Firebase</span>
+                            <span class="m-lab">Login & Cloud</span>
+                        </div>
+                        <div class="m-item">
+                            <span class="m-val">Chart.js</span>
+                            <span class="m-lab">Gráficos Instantâneos</span>
+                        </div>
+                        <div class="m-item">
+                            <span class="m-val">IA Generativa</span>
+                            <span class="m-lab">Arquitetura Guiada</span>
+                        </div>
+                    </div>
+                    <a href="https://c2o-dashboard.web.app/" target="_blank" rel="noopener noreferrer" class="btn-outline" style="margin-top: 1.5rem; display: inline-block;">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar C2O Analytics
+                    </a>
+                </div>
+                <div class="card-main-image">
+                    <img src="c2o.png" alt="C2O Analytics" class="project-img" style="cursor: pointer;" onclick="openModal(this.src)">
+                </div>
+            </div>
+
+            <!-- DESAFIO DIO: PORSCHE SALES ANALYTICS -->
+            <div class="card-main reveal">
+                <div class="card-main-content">
+                    <div>
+                        <span class="sad-badge">DESAFIO DIO</span>
+                        <h2 style="color: #FFD700 !important; font-size: 2.5rem; margin-bottom: 0.5rem;">C2O Dashboard DIO</h2>
+                        <p style="color: #FFFFFF !important; font-size: 1.1rem; opacity: 0.95;">O C2O é um agente inteligente de visualização de dados focado em analisar vendas de veículos Porsche. Com um design system sofisticado inspirado no Microsoft Power BI, o agente transforma planilhas brutas de Excel em um painel interativo, analisando os dados e escolhendo automaticamente o melhor tipo de gráfico para cada KPI.</p>
+                    </div>
+                    <div class="sad-metrics">
+                        <div class="m-item">
+                            <span class="m-val">Chart.js</span>
+                            <span class="m-lab">Inteligência Visual</span>
+                        </div>
+                        <div class="m-item">
+                            <span class="m-val">SheetJS</span>
+                            <span class="m-lab">Parsing de Dados</span>
+                        </div>
+                        <div class="m-item">
+                            <span class="m-val">Power BI</span>
+                            <span class="m-lab">Design UI/UX</span>
+                        </div>
+                    </div>
+                    <a href="https://carlosjesusj748-blip.github.io/c2o-dashboarddio/" target="_blank" rel="noopener noreferrer" class="btn-outline" style="margin-top: 1.5rem; display: inline-block;">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar Dashboard Porsche
+                    </a>
+                </div>
+                <div class="card-main-image">
+                    <img src="Criando uma Dashboard da Porche com Agentes de IA.png" alt="C2O Dashboard DIO Porsche" class="project-img" style="cursor: pointer;" onclick="openModal(this.src)">
                 </div>
             </div>
 
             <!-- DESTAQUE 2: B2R ESTÁGIO & QUILOMBO -->
-            <div class="b2r-card reveal">
-                <span class="b2r-tag">Trajetória Corporativa</span>
-                <h3 style="font-size: 1.8rem; margin: 1rem 0;">Experiência Administrativa</h3>
-                <p style="font-weight: 500; margin-bottom: 1.5rem;">Atuação estratégica no coração dos processos administrativos, tanto no setor privado quanto no 3º setor.</p>
-                <ul class="experience-list">
+            <div class="b2r-card reveal featured-exp">
+                <span class="b2r-tag featured-tag">Trajetória Corporativa</span>
+                <h3 class="featured-title">Experiência Administrativa</h3>
+                <p class="featured-desc">Atuação estratégica no coração dos processos administrativos, tanto no setor privado quanto no 3º setor.</p>
+                <ul class="experience-list featured-list">
                     <li>
                         <strong>B2R Serviços Administrativos (2025-2026)</strong>
                         <p>Apoio direto na elaboração de projetos incentivados para editais, prestação de contas, organização de documentos e acompanhamento de cronogramas.</p>
@@ -141,37 +203,22 @@
                 </ul>
             </div>
 
-            <!-- OUTROS: C2O ANALYTICS -->
-            <div class="other-card reveal">
-                <span class="b2r-tag">Data Engine</span>
-                <h3 style="margin: 1rem 0;">C2O Analytics</h3>
-                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Painel de BI para negócios locais gerado via arquitetura guiada por IA. Upload universal de planilhas com renderização instantânea, interface Glassmorphism e login via Firebase.</p>
-                <img src="c2o.png" alt="C2O Analytics" class="project-img-small" style="border-radius: 12px; margin-bottom: 1rem; width: 100%; object-fit: cover;">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <div style="display: flex; gap: 10px;">
-                        <i class="fa-solid fa-cloud" title="Firebase"></i>
-                        <i class="fa-solid fa-code" title="JS"></i>
-                        <i class="fa-solid fa-chart-pie" title="Chart.js"></i>
-                    </div>
-                    <a href="https://c2o-dashboard.web.app/" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: bold; font-size: 0.9rem;">
-                        Acessar <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
 
-            <!-- CERTIFICADOS -->
+
+            <!-- CERTIFICADOS E CONQUISTAS -->
             <div class="card-main reveal certificates-card" style="grid-column: span 12; background: var(--glass); border: 1px solid var(--border); padding: 3rem; border-radius: 32px; display: flex; flex-direction: column;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
-                    <div>
-                        <span class="sad-badge" style="margin-bottom: 0.5rem; border-color: var(--accent); color: var(--accent);">APERFEIÇOAMENTO</span>
-                        <h2 style="font-size: 2.2rem; color: var(--primary) !important; margin-bottom: 0;">Meus Certificados</h2>
+                    <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                        <span class="sad-badge" style="margin-bottom: 0; width: fit-content; border-color: var(--accent); color: var(--accent);">APERFEIÇOAMENTO & CONQUISTAS</span>
+                        <h2 style="font-size: 2.2rem; color: var(--primary) !important; margin-bottom: 0;">Meus Certificados e Conquistas</h2>
                     </div>
-                    <a href="https://drive.google.com/drive/folders/1MEy166bbt2O0BfHypVkLyWNC42kiYhKE?usp=sharing" target="_blank" class="btn-outline">
+                    <a href="https://drive.google.com/drive/folders/1MEy166bbt2O0BfHypVkLyWNC42kiYhKE?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-outline">
                         <i class="fa-solid fa-folder-open"></i> Acessar Pasta no Drive
                     </a>
                 </div>
                 
                 <div class="certificates-grid">
+                    <img src="RESULTADO DEFINITIVO DA CLASSIFICAÇÃO FINAL - CONCURSO PÚBLICO NACIONAL UNIFICADO - CPNU 2.png" alt="Resultado CNU" loading="lazy" onclick="openModal(this.src)">
                     <img src="Fundamentos dados dados em todos os lugares um curso on-line autorizado pela Google e ministrado através da Coursera.png" alt="Certificado Google Coursera - Fundamentos" loading="lazy" onclick="openModal(this.src)">
                     <img src="Fazer perguntas para tomar decisões com base em dados um curso on-line autorizado pela Google e ministrado através da Coursera.png" alt="Certificado Google Coursera" loading="lazy" onclick="openModal(this.src)">
                     <img src="AI Reports com Excel, GPT Agents e Claude Code.png" alt="Certificado" loading="lazy" onclick="openModal(this.src)">

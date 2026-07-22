@@ -1,9 +1,9 @@
 :root {
-    --bg-base: #FFFFFF;
-    --primary: #000000;
+    --bg-base: #F4F5F7;
+    --primary: #111111;
     --accent: #003C71;
-    --text-main: #000000;
-    --text-muted: #333333;
+    --text-main: #222222;
+    --text-muted: #444444;
     --glass: rgba(255, 255, 255, 0.9);
     --border: rgba(0, 0, 0, 0.1);
     --shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15);
@@ -141,6 +141,43 @@ nav {
 }
 .experience-list strong { color: var(--primary); font-size: 1.1rem; display: block; margin-bottom: 0.3rem; }
 .experience-list p { color: var(--text-muted); font-size: 0.95rem; }
+
+/* Featured Experience Highlights */
+.featured-exp {
+    grid-column: span 12;
+    background: linear-gradient(135deg, #003C71, #4DA6FF);
+    color: #FFFFFF;
+    border: none;
+    box-shadow: 0 15px 35px rgba(0, 60, 113, 0.3);
+}
+.dark-mode .featured-exp {
+    background: linear-gradient(135deg, #0f172a, #1e40af);
+}
+.featured-tag {
+    color: rgba(255, 255, 255, 0.8);
+}
+.featured-title {
+    font-size: 2.2rem;
+    margin: 1rem 0;
+    color: #FFD700;
+}
+.featured-desc {
+    font-weight: 500;
+    margin-bottom: 2rem;
+    color: #F8FAFC;
+    font-size: 1.1rem;
+}
+.featured-list strong {
+    color: #FFD700;
+    font-size: 1.2rem;
+}
+.featured-list p {
+    color: #F8FAFC;
+    opacity: 0.95;
+}
+.featured-list li::before {
+    color: #FFD700;
+}
         
 .other-card {
     grid-column: span 5; background: var(--glass); border: 1px solid var(--border);

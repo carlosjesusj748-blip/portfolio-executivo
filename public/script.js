@@ -27,7 +27,7 @@ const chatInput = document.getElementById('chatInput');
 const sendChatBtn = document.getElementById('sendChatBtn');
 const chatMessages = document.getElementById('chatMessages');
 
-function sendMsg() {
+async function sendMsg() {
     const text = chatInput.value.trim();
     if(!text) return;
 
@@ -40,32 +40,36 @@ function sendMsg() {
     chatInput.value = '';
     chatMessages.scrollTop = chatMessages.scrollHeight;
 
-    // Resposta IA
-    setTimeout(() => {
-        const aiMsg = document.createElement('div');
-        aiMsg.className = 'msg bot';
-        
-        const lowerText = text.toLowerCase();
-        let response = '';
+    // Indicador de digitação
+    const aiMsg = document.createElement('div');
+    aiMsg.className = 'msg bot';
+    aiMsg.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Pensando...';
+    chatMessages.appendChild(aiMsg);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
 
-        if (lowerText.includes('sad') || lowerText.includes('sabor') || lowerText.includes('projeto')) {
-            response = '<strong>SAD Sabor de Casa:</strong> Foi meu projeto de destaque! Usei métodos mistos para diagnosticar o gargalo da lanchonete e criei uma aplicação web que simula o ROI. Orquestrei as IAs (Gemini Pro) para desenvolver toda a lógica matemática da plataforma.';
-        } else if (lowerText.includes('c2o') || lowerText.includes('analytics')) {
-            response = '<strong>C2O Analytics:</strong> Atuei como Arquiteto de Produto. Utilizei o Gemini para criar um dashboard em JS e Firebase. Ele recebe planilhas, higieniza e gera gráficos instantâneos com Chart.js!';
-        } else if (lowerText.includes('b2r') || lowerText.includes('estágio') || lowerText.includes('experiência')) {
-            response = '<strong>Experiência:</strong> Estagiei na B2R Serviços Administrativos (atuando na elaboração de projetos e prestação de contas) e atuei como Assistente Voluntário na Assoc. Quilombola Bete II por mais de 6 anos.';
-        } else if (lowerText.includes('contato') || lowerText.includes('email') || lowerText.includes('telefone')) {
-            response = 'Preencha o formulário abaixo! A mensagem vai direto para a minha automação. Meu WhatsApp é (75) 99824-2840.';
-        } else if (lowerText.includes('n8n') || lowerText.includes('ia') || lowerText.includes('gemini') || lowerText.includes('make')) {
-            response = 'Tenho forte foco em orquestrar agentes (Gemini, DeepSeek, Claude) para resolver problemas corporativos e automatizar fluxos complexos usando ferramentas como n8n e Make.';
+    try {
+        const response = await fetch(MAKE_WEBHOOK_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                tipo: 'Chat',
+                mensagem: text,
+                origem: 'Portfólio Executivo (Novo Template)'
+            })
+        });
+
+        if (response.ok) {
+            // Esperamos que o módulo 'Webhook Response' do Make devolva um texto simples
+            const responseText = await response.text();
+            aiMsg.innerHTML = responseText || 'Desculpe, não consegui formular uma resposta agora.';
         } else {
-            response = 'Legal! Ainda estou rodando como simulação local. Pergunte-me sobre o <strong>SAD Sabor de Casa</strong>, o <strong>C2O Analytics</strong> ou como entrar em <strong>contato</strong>!';
+            aiMsg.innerHTML = 'Houve um erro ao processar sua mensagem. Tente novamente.';
         }
-
-        aiMsg.innerHTML = response;
-        chatMessages.appendChild(aiMsg);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-    }, 800);
+    } catch (error) {
+        aiMsg.innerHTML = 'Erro de comunicação com o servidor. Tente mais tarde.';
+    }
+    
+    chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
 if(sendChatBtn) sendChatBtn.addEventListener('click', sendMsg);
