@@ -112,6 +112,16 @@ nav {
 }
 .btn-outline:hover { background: var(--accent); color: var(--primary); transform: translateY(-2px); }
 
+/* Correção para botões nos cards escuros */
+.card-main-content .btn-outline {
+    border-color: #FFD700;
+    color: #FFD700;
+}
+.card-main-content .btn-outline:hover {
+    background: #FFD700;
+    color: #003C71;
+}
+
 /* SAD Sabor Highlight */
 .sad-badge { 
     background: rgba(255, 255, 255, 0.1); color: #4DA6FF;
@@ -297,9 +307,13 @@ input:focus, textarea:focus { border-color: var(--accent); background: var(--bg-
 
 @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
+@media (min-width: 993px) {
+    .reverse-layout { flex-direction: row-reverse !important; }
+}
+
 @media (max-width: 992px) {
     .card-main { flex-direction: column; padding: 3rem; }
-    .card-main-image { width: 100%; }
+    .card-main-image { width: 100%; margin-top: 1rem; }
 }
 
 @media (max-width: 850px) {
