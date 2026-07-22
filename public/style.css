@@ -74,11 +74,15 @@ nav {
 
 .kpi-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
 .kpi-card {
-    background: var(--glass); padding: 2rem; border-radius: 24px;
-    border: 1px solid var(--border); box-shadow: var(--shadow);
-    transition: var(--transition); display: flex; flex-direction: column;
+    background: var(--glass); padding: 2.5rem; border-radius: 20px;
+    border: 2px solid rgba(0, 60, 113, 0.15); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: var(--transition); display: flex; flex-direction: column; gap: 0.5rem;
 }
-.kpi-card:hover { transform: translateY(-10px); border-color: var(--accent); }
+.kpi-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 60, 113, 0.2);
+    border-color: var(--accent);
+}
 .kpi-val { font-size: 2.2rem; font-weight: 800; display: block; color: var(--primary); }
 .kpi-label { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem; }
 
@@ -122,11 +126,17 @@ nav {
     color: #003C71;
 }
 
-/* SAD Sabor Highlight */
 .sad-badge { 
     background: rgba(255, 255, 255, 0.1); color: #4DA6FF;
     padding: 6px 16px; border-radius: 100px; font-size: 0.8rem; font-weight: 700;
     display: inline-block; margin-bottom: 1rem; border: 1px solid #4DA6FF;
+}
+
+/* Badges contrastantes dentro dos cards escuros */
+.card-main .sad-badge {
+    color: #FFD700;
+    border-color: #FFD700;
+    background: rgba(255, 215, 0, 0.1);
 }
 .sad-metrics { display: flex; gap: 2rem; margin-top: 1rem; flex-wrap: wrap; }
 .m-item { border-left: 2px solid var(--accent); padding-left: 1rem; }
@@ -313,7 +323,7 @@ input:focus, textarea:focus { border-color: var(--accent); background: var(--bg-
 
 @media (max-width: 992px) {
     .card-main { flex-direction: column; padding: 3rem; }
-    .card-main-image { width: 100%; margin-top: 1rem; }
+    .card-main-image { width: 100%; margin-top: 3rem; }
 }
 
 @media (max-width: 850px) {
